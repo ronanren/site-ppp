@@ -31,12 +31,42 @@
 body {
     font-family: 'Open Sans';
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #444;
 }
 
-h1, h3 {
+/* TITRES */
+h1, h2 {
     font-weight: 700;
     color: var(--pink);
 }
+
 h2 {
     font-weight: 300;
+    text-align: center;
 }
+
+h3 {
+    color: #000;
+    text-align: center;
+}
+
+article:nth-child(odd) h3
+{
+    color: #FFF;
+}
+
+/* ÉLÉMENTS */
+header, article, footer {
+    margin: 0;
+    padding: 10px 15%;
+}
+
+/* ARTICLE */
+article:nth-child(odd)
+{
+    background-color: blue;
+    color: #FFF;
+}
+
