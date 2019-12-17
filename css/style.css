@@ -1,24 +1,22 @@
+/* FONTS */
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../font/open-sans/opensans-regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
-
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../font/open-sans/opensans-bold.ttf') format('truetype');
     font-style: bold;
     font-weight: 700;
 }
-
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../font/open-sans/opensans-italic.ttf') format('truetype');
     font-style: italic;
     font-weight: 400;
 }
-
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Light'), local('OpenSans-Light'), url('../font/open-sans/opensans-light.ttf') format('truetype');
@@ -26,7 +24,8 @@
     font-weight: 300;
 }
 
-:root {
+/* ROOT */
+:root{
     --pink: #ff3860;
     --blue: #0054fc;
 }
@@ -41,8 +40,7 @@ body {
 }
 
 /* TITRES */
-h1,
-h2 {
+h1, h2 {
     font-weight: 700;
     color: var(--pink);
 }
@@ -57,31 +55,38 @@ h3 {
     text-align: center;
 }
 
-article:nth-child(even) h3 {
+/* PARAGRAPHES */
+.indentation {
+    text-indent: 50px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* LIENS */
+a {
+    color: red;
+}
+
+
+/* ZONES BLEUS */
+article:nth-child(even), article:nth-child(even) h3
+{
     color: #FFF;
 }
 
 /* ÉLÉMENTS */
-/* header, article, footer {
-    margin: 0;
-    /* padding: 10px 15%; */
-
-
 .section {
     padding: 10px 15%;
     width: fit-content;
 }
 
-article p:last-child {
+.section p:last-child {
     margin-bottom: 100px;
-    ;
 }
 
-
-article:nth-child(even) {
-    color: #FFF;
-}
-
+/* IMAGES */
 figure {
     text-align: center;
     width: 100%;
@@ -93,23 +98,6 @@ figure img {
     height: auto;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.indentation {
-    text-indent: 50px;
-}
-
-p {
-    text-align: justify;
-}
-
-.section {
-    padding: 10px 15%;
-    width: fit-content;
-}
-
-a {
-    color: red;
 }
 
 .progress-container {
