@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
-        sectionsColor: ['#fff', 'blue', '#fff', 'blue', '#fff'],
+        sectionsColor: ['#fff', '#0054fc', '#fff', '#0054fc', '#fff'],
         scrollingSpeed: 300
     });
 });
