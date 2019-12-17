@@ -81,6 +81,15 @@ article:nth-child(even)
 
 figure {
     text-align: center;
+    width: 100%;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .indentation {
@@ -93,4 +102,7 @@ p {
 .section {
     padding: 10px 15%;
     width: fit-content;
+}
+a {
+    color: red;
 }
