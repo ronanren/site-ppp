@@ -34,6 +34,7 @@ body {
     margin: 0;
     padding: 0;
     color: #444;
+    box-sizing: border-box;
 }
 
 /* TITRES */
@@ -52,21 +53,27 @@ h3 {
     text-align: center;
 }
 
-article:nth-child(odd) h3
+article:nth-child(even) h3
 {
     color: #FFF;
 }
 
 /* ÉLÉMENTS */
-header, article, footer {
+/* header, article, footer {
     margin: 0;
+    /* padding: 10px 15%; */
+
+
+.section {
     padding: 10px 15%;
+    width: fit-content;
 }
 
-/* ARTICLE */
-article:nth-child(odd)
+article p:last-child {
+    margin-bottom: 100px;;
+}
+
+article:nth-child(even)
 {
-    background-color: blue;
     color: #FFF;
 }
-
