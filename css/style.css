@@ -73,11 +73,12 @@ article p:last-child {
     margin-bottom: 100px;;
 }
 
-<<<<<<< HEAD
+
 article:nth-child(even)
 {
     color: #FFF;
-=======
+}
+
 figure {
     text-align: center;
 }
@@ -87,5 +88,9 @@ figure {
 }
 p {
     text-align: justify;
->>>>>>> 86efe80391aad298f5399af00616d04760fa77e3
+}
+
+.section {
+    padding: 10px 15%;
+    width: fit-content;
 }
