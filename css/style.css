@@ -5,18 +5,21 @@
     font-style: normal;
     font-weight: 400;
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../font/open-sans/opensans-bold.ttf') format('truetype');
     font-style: bold;
     font-weight: 700;
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../font/open-sans/opensans-italic.ttf') format('truetype');
     font-style: italic;
     font-weight: 400;
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Light'), local('OpenSans-Light'), url('../font/open-sans/opensans-light.ttf') format('truetype');
@@ -25,7 +28,7 @@
 }
 
 /* ROOT */
-:root{
+:root {
     --pink: #ff3860;
     --blue: #0054fc;
 }
@@ -40,7 +43,8 @@ body {
 }
 
 /* TITRES */
-h1, h2 {
+h1,
+h2 {
     font-weight: 700;
     color: var(--pink);
 }
@@ -66,17 +70,13 @@ p {
 }
 
 /* LIENS */
-a
-{
-      color: white;
-      mix-blend-mode: difference;
-      
+a {
+    color: white;
 }
 
-
 /* ZONES BLEUS */
-article:nth-child(even), article:nth-child(even) h3
-{
+article:nth-child(even),
+article:nth-child(even) h3 {
     color: #FFF;
 }
 
@@ -84,6 +84,7 @@ article:nth-child(even), article:nth-child(even) h3
 .section {
     padding: 10px 15%;
     width: fit-content;
+    top: 60px;
 }
 
 .section p:last-child {
@@ -94,7 +95,7 @@ article:nth-child(even), article:nth-child(even) h3
 figure {
     text-align: center;
     width: 100%;
-    margin: auto; 
+    margin: auto;
 }
 
 figure img {
@@ -106,37 +107,109 @@ figure img {
 }
 
 figcaption {
-    text-align:center;
+    text-align: center;
     padding-bottom: 10px;
 }
 
+/* NAV */
+body > nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    z-index: 11;
+    height: 56px;
+    width: 100%;
+}
+
+h1 {
+    background-color: #fff;
+    padding: 5px 30px;
+    border-radius: 1em;
+    margin-left: 20px;
+}
+
+body > nav > div {
+    display: flex;
+    height: 100%;
+}
+
+body > nav > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body > nav > div div > a {
+    text-decoration: none;
+}
+
+body > nav > div > div:hover {
+    background-color: #fff;
+}
+
+body > nav > div > div:hover > a {
+    color: #333;
+}
+
+/* SOUS-MENU */
+body > nav > div div div {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    background-color: #333;
+    min-width: 160px;
+}
+
+body > nav > div div div a {
+    height: 40px;
+    line-height: 40px;
+}
+
+body > nav > div div:hover div {
+    display: flex;
+}
+
+body > nav > div div div a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* PROGRESS SCROLL */
 .progress-container {
     position: fixed;
-    top: 0;
+    top: 56px;
     z-index: 10;
     width: 100%;
-    height: 8px;
+    height: 4px;
     background: #ccc;
 }
 
 .progress-bar {
-    height: 8px;
+    transition: width 1s;
+    height: 4px;
     background: var(--pink);
-    width: 0%;
+    width: 25%;
 }
 
-.chiffrement-mobile 
-{
+/* SÉCURITÉ*/
+.chiffrement-mobile {
     display: none;
 }
+
 @media screen and (max-width: 750px) {
-  .chiffrement 
-  {
-    display: none;
-  }
-  .chiffrement-mobile
-  {
-    display: block;
-  }
-}
+    .chiffrement {
+        display: none;
+    }
 
+    .chiffrement-mobile {
+        display: block;
+    }
+}
