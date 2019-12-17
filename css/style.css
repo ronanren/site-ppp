@@ -70,3 +70,13 @@ article:nth-child(odd)
     color: #FFF;
 }
 
+figure {
+    text-align: center;
+}
+
+.indentation {
+    text-indent: 50px;
+}
+p {
+    text-align: justify;
+}
