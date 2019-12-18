@@ -33,14 +33,13 @@
     --blue: #0054fc;
 }
 
-html, body {
+body {
     font-family: 'Open Sans';
     font-weight: 400;
     margin: 0;
     padding: 0;
     color: #444;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 /* TITRES */
@@ -75,34 +74,23 @@ a {
     color: white;
     mix-blend-mode: difference;
 
+}
 
+
+/* ZONES BLEUS */
+article:nth-child(even),
+article:nth-child(even) h3 {
+    color: #FFF;
 }
 
 /* ÉLÉMENTS */
-header {
-    padding: 20px 7%;
+.section {
+    padding: 10px 15%;
+    width: fit-content;
 }
 
-
-/* ZONES BLEUS */
-article:nth-child(even),
-article:nth-child(even) h3 {
-    color: #FFF;
-article {
-    padding: 50px 7%;
-
-}
-
-main {
-    position: relative;
-    top: 60px;
-}
-
-/* ZONES BLEUS */
-article:nth-child(even),
-article:nth-child(even) h3 {
-    background-color: var(--blue);
-    color: #FFF;
+.section p:last-child {
+    margin-bottom: 100px;
 }
 
 /* IMAGES */
@@ -125,95 +113,20 @@ figcaption {
     padding-bottom: 10px;
 }
 
-/* NAV */
-body > nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    z-index: 11;
-    height: 56px;
-    width: 100%;
-    top: 0;
-}
-
-h1 {
-    background-color: #fff;
-    padding: 5px 30px;
-    border-radius: 1em;
-    margin-left: 20px;
-}
-
-body > nav > div {
-    display: flex;
-    height: 100%;
-}
-
-body > nav > div > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-body > nav > div div > a {
-    text-decoration: none;
-}
-
-body > nav > div > div:hover {
-    background-color: #fff;
-}
-
-body > nav > div > div:hover > a {
-    color: #333;
-}
-
-/* SOUS-MENU */
-body > nav > div div div {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 56px;
-    background-color: #333;
-    min-width: 160px;
-}
-
-body > nav > div div div a {
-    height: 40px;
-    line-height: 40px;
-}
-
-body > nav > div div:hover div {
-    display: flex;
-}
-
-body > nav > div div div a:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-/* PROGRESS SCROLL */
 .progress-container {
     position: fixed;
-    top: 56px;
+    top: 0;
     z-index: 10;
     width: 100%;
-    height: 4px;
+    height: 8px;
     background: #ccc;
 }
 
 .progress-bar {
-    transition: width 0.3s;
-    height: 4px;
+    height: 8px;
     background: var(--pink);
     width: 0%;
 }
-
 
 .chiffrement-mobile {
     display: none;
@@ -244,19 +157,4 @@ body > nav > div div div a:hover {
 
 .inline-photo.is-visible {
     opacity: 1;
-
-/* SÉCURITÉ*/
-.chiffrement-mobile {
-    display: none;
-}
-
-@media screen and (max-width: 750px) {
-    .chiffrement {
-        display: none;
-    }
-
-    .chiffrement-mobile {
-        display: block;
-    }
-
 }
