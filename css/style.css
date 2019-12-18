@@ -33,13 +33,14 @@
     --blue: #0054fc;
 }
 
-body {
+html, body {
     font-family: 'Open Sans';
     font-weight: 400;
     margin: 0;
     padding: 0;
     color: #444;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* TITRES */
@@ -74,21 +75,25 @@ a {
     color: white;
 }
 
-/* ZONES BLEUS */
-article:nth-child(even),
-article:nth-child(even) h3 {
-    color: #FFF;
+/* ÉLÉMENTS */
+header {
+    padding: 20px 7%;
 }
 
-/* ÉLÉMENTS */
-.section {
-    padding: 10px 15%;
-    width: fit-content;
+article {
+    padding: 50px 7%;
+}
+
+main {
+    position: relative;
     top: 60px;
 }
 
-.section p:last-child {
-    margin-bottom: 100px;
+/* ZONES BLEUS */
+article:nth-child(even),
+article:nth-child(even) h3 {
+    background-color: var(--blue);
+    color: #FFF;
 }
 
 /* IMAGES */
@@ -121,6 +126,7 @@ body > nav {
     z-index: 11;
     height: 56px;
     width: 100%;
+    top: 0;
 }
 
 h1 {
@@ -193,10 +199,10 @@ body > nav > div div div a:hover {
 }
 
 .progress-bar {
-    transition: width 1s;
+    transition: width 0.3s;
     height: 4px;
     background: var(--pink);
-    width: 25%;
+    width: 0%;
 }
 
 /* SÉCURITÉ*/
