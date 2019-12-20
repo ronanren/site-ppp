@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sécurité</title>
-    <link rel="stylesheet" type="text/css" href="../css/jquery.pagepiling.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 
 <body>
-    <!-- NAVBAR -->
+        <!-- NAVBAR -->
     <nav>
         <h1>fitech</h1>
         <div>
@@ -25,20 +24,20 @@
             </div>
 
             <div>
-                <a href="../applications">Applications</a>
+                <a href="../applications/index.html#">Applications</a>
                 <div>
-                    <a href="../applications#section-1">Section 1</a>
-                    <a href="../applications#section-2">Section 2</a>
-                    <a href="../applications#section-3">Section 3</a>
+                    <a href="../applications/index.html#recolte">Récolte</a>
+                    <a href="../applications/index.html#traitement">Traitement</a>
+                    <a href="../applications/index.html#affichage">Affichage</a>
                 </div>
             </div>
 
             <div>
                 <a href="../securite">Sécurité</a>
                 <div>
-                    <a href="../securite#section-1">Section 1</a>
-                    <a href="../securite#section-2">Section 2</a>
-                    <a href="../securite#section-3">Section 3</a>
+                    <a href="../securite#biometrie">Biométrie</a>
+                    <a href="../securite#protection-des-donnees">Protection des données</a>
+                    <a href="../securite#failles">Failles</a>
                 </div>
             </div>
         </div>
@@ -46,19 +45,23 @@
 
     <!-- SCROLL PROGRESS -->
     <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
+        <div class="progress-bar" id="scroll-indicator"></div>
     </div>
 
+    <!-- DOTS MENU -->
+    <div>
+        <a href=""></a>
+    </div>
     <!-- HEADER -->
-    <main id="pagepiling">
-        <header class="section pp-scrollable">
+    <main>
+        <header >
             <h2>Sécurité</h2>
             <p>Le but de la sécurité au sein des applications et objets connectés est l'anonymat des données et la protection de la vie privée.</p>
 
         </header>
 
         <!-- Biométrie -->
-        <article class="section pp-scrollable">
+        <article id="biometrie">
             <h3>Biométrie</h3>
             <p>La biométrie regroupe l’ensemble des techniques informatiques permettant de reconnaître automatiquement un individu à partir de ses caractéristiques physiques,
                 biologiques. Les données biométriques sont des données à caractère personnel car elles permettent d’identifier une unique personne. Par exemple, l’ADN,
@@ -112,7 +115,7 @@
             </p>
         </article>
         <!-- Protection des données -->
-        <article class="section pp-scrollable">
+        <article id="protection-des-donnees">
             <h3>Protection des données</h3>
             <p>La protection des données est un sujet important pour assurer l’anonymat des données des différents utilisateurs.</p>
             <p>Il existe le RGPD qui signifie « Règlement Général sur la Protection des Données ». Le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne.
@@ -134,7 +137,7 @@
             </figure>
         </article>
         <!-- Failles -->
-        <article class="section pp-scrollable">
+        <article id="failles">
             <h3>Failles</h3>
             <p>
                 Les objets connectés et applications sont de plus en plus nombreux chaque jour. Ainsi, ces objets et applications produisent une grande quantité de données
@@ -172,8 +175,6 @@
     </main>
     <!-- -->
     <footer></footer>
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/jquery.pagepiling.min.js"></script>
     <script src="../js/scroll.js"></script>
 </body>
 
