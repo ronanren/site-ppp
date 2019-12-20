@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Menu</title>
+        <style>
+            .hello {
+                background-image: url('img/guitar.png');
+                background-position: left center;
+                height: 313px;
+                width: 143px;
+            }
+            
+            .showed {
+                animation: 1s play steps(24);
+                animation-fill-mode : forwards;
+            }
+            
+            @keyframes play {
+                100% {
+                    background-position: -3432px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#" class="activate-menu">Activer le menu</a>
+        <div class="hello">
+        </div>
+        <script>
+            let activate = false;
+            document.querySelector(".activate-menu").addEventListener('click', () => {
+                activate ?document.querySelector('.hello').classList.remove("showed") : document.querySelector('.hello').classList.add("showed") 
+                activate = !activate;
+            })
+        </script>
+    </body>
+</html>
