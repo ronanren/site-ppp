@@ -6,26 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Applications</title>
-    <link rel="stylesheet" type="text/css" href="../css/jquery.pagepiling.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav>
-        <h1></h1>
+        <h1>fitech</h1>
+        <div>
+            <div>
+                <a href="../objets-connectes">Objets connectés</a>
+                <div>
+                    <a href="../objets-connectes#section-1">Section 1</a>
+                    <a href="../objets-connectes#section-2">Section 2</a>
+                    <a href="../objets-connectes#section-3">Section 3</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="../applications/index.html#">Applications</a>
+                <div>
+                    <a href="../applications/index.html#recolte">Récolte</a>
+                    <a href="../applications/index.html#traitement">Traitement</a>
+                    <a href="../applications/index.html#affichage">Affichage</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="../securite">Sécurité</a>
+                <div>
+                    <a href="../securite#section-1">Section 1</a>
+                    <a href="../securite#section-2">Section 2</a>
+                    <a href="../securite#section-3">Section 3</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
+    <!-- SCROLL PROGRESS -->
+    <div class="progress-container">
+        <div class="progress-bar" id="scroll-indicator"></div>
+    </div>
+
+    <!-- DOTS MENU -->
+    <div>
+        <a href=""></a>
+    </div>
+
     <!-- HEADER -->
-    <main id="pagepiling">
-        <header class="section pp-scrollable">
+    <main>
+        <header>
             <h2>Applications connectés</h2>
             <p>Le but des applications connectées est de récolter les données des appareils connectés, de les traiter et
                 d’indiquer de façon simple à l’utilisateur comment améliorer sa santé à partir de ces dernières.</p>
         </header>
 
         <!-- CONTENU PRINCIPAL -->
-        <article class="section pp-scrollable">
+        <article id="recolte">
             <h3>Récolte des données</h3>
             <p>
                 Pour récolter des données, l’application a deux possibilités :
@@ -49,8 +86,8 @@
         </article>
 
         <!-- TRAITEMENT -->
-        <article class="section pp-scrollable">
-            <h3>Récolte des données</h3>
+        <article id="traitement">
+            <h3>Traitement des données</h3>
             <p>
                 Pour récolter des données, l’application a deux possibilités :
                 <ul>
@@ -105,8 +142,8 @@
         </article>
 
         <!-- AFFICHAGE -->
-        <article class="section pp-scrollable">
-            <h3>Récolte des données</h3>
+        <article id="affichage">
+            <h3>Affichage des données</h3>
             <p>
                 Pour récolter des données, l’application a deux possibilités :
                 <ul>
@@ -131,9 +168,6 @@
 
     <!-- FOOTER -->
     <footer></footer>
-
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/jquery.pagepiling.min.js"></script>
     <script src="../js/scroll.js"></script>
 </body>
 
