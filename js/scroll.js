@@ -51,3 +51,4 @@ window.onscroll = function() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("scroll-indicator").style.width = scrolled + "%";
 }
+
