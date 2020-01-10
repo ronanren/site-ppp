@@ -67,8 +67,10 @@ let enable = false
 document.querySelector(".mobile-bar a").addEventListener("click", function() {
     if (enable) {
         document.querySelector("body > nav").classList.remove("displayed");
+        document.querySelector("3d-image").classList.remove("displayed");
     } else {
         document.querySelector("body > nav").classList.add("displayed");
+        document.querySelector("3d-image").classList.remove("displayed");
 
     }
 

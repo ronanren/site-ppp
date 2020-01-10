@@ -33,7 +33,8 @@
     --blue: #0054fc;
 }
 
-html, body {
+html,
+body {
     font-family: 'Open Sans';
     font-weight: 400;
     margin: 0;
@@ -293,6 +294,11 @@ footer a {
     width: 100vw;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 10;
 }
 
 .mobile-bar a {
@@ -349,5 +355,27 @@ footer a {
 @media (min-width: 600px) {
     .mobile-bar {
         display: none;
+    }
+}
+
+/* 3D image */
+.coeur-3d {
+    background-image: url('../img/coeur.png');
+}
+
+.image-3d {
+    background-position: left center;
+    height: 500px;
+    width: 500px;
+}
+
+.displayed {
+    animation: 1s play steps(30);
+    animation-fill-mode: forwards;
+}
+
+@keyframes play {
+    100% {
+        background-position: -15000px;
     }
 }
