@@ -133,6 +133,15 @@ body > nav {
     top: 0;
 }
 
+body > nav > div:first-of-type {
+    display: block;
+    height: auto;
+}
+
+body > nav > div:first-of-type a {
+    display: none;
+}
+
 h1 {
     background-color: #fff;
     padding: 5px 30px;
@@ -275,4 +284,70 @@ footer {
 
 footer a {
     color: var(--pink);
+}
+
+/* MOBILE BAR */
+.mobile-bar {
+    background-color: #333;
+    height: 56px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-bar a {
+    position: fixed;
+    top: 3px;
+    left: 10px;
+}
+
+.mobile-bar h1 {
+    margin: 0 auto;
+    padding: 5px 30px;
+    font-size: 1.5em;
+}
+
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+    body > nav {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    body > nav.displayed {
+        display: flex;
+    }
+
+    body > nav > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body > nav > div > div {
+        flex-basis: 70px;
+    }
+
+    body > nav > div div:hover div {
+        display: none;
+    }
+
+    body > nav > div:first-of-type a {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 10px;
+    }
+}
+
+/* VERSION ORDINATEUR */
+@media (min-width: 600px) {
+    .mobile-bar {
+        display: none;
+    }
 }

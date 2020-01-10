@@ -60,3 +60,23 @@ document.querySelectorAll(".more-info > a")
 
     })
 })
+
+/* ENABLE MENU MOBILE */
+let enable = false
+
+document.querySelector(".mobile-bar a").addEventListener("click", function() {
+    if (enable) {
+        document.querySelector("body > nav").classList.remove("displayed");
+    } else {
+        document.querySelector("body > nav").classList.add("displayed");
+
+    }
+
+    enable = !enable;
+});
+
+document.querySelector("body > nav > div:first-of-type a").addEventListener("click", function() {
+    document.querySelector("body > nav").classList.remove("displayed");
+    enable = false;
+});
+
