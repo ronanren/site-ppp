@@ -209,6 +209,50 @@ body > nav > div div div a:hover {
     width: 0%;
 }
 
+/* MORE INFO */
+.more-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.more-info > a {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #444;
+    border-radius: 1em;
+    padding: 10px 50px;
+    text-align: center;
+    flex-basis: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    width: 50%;
+    transition: border 0.2s, width 0.2s;
+}
+
+.more-info > div {
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    text-align: justify;
+    color: #444;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.more-info.displayed > div {
+    height: 100%;
+    padding: 20px;
+    opacity: 1;
+}
+
+.more-info.displayed > a {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+}
+
 /* SÉCURITÉ*/
 .chiffrement-mobile {
     display: none;
