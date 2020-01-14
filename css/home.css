@@ -42,6 +42,7 @@ body {
     color: #444;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    padding-bottom: 50px;
 }
 
 /* TITRES */
@@ -421,15 +422,19 @@ header img {
 
 #container div {
     flex: 1;
+    
 
 }
 
 .article {
     display: inline-block;
     width: 300px;
-    height: 300px;
+    height: 250px;
     border-radius: 30px;
     margin-bottom: 0px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    
 }
 
 .article img {
@@ -474,8 +479,11 @@ a p {
     	width: 100%;
     }
 }
-
-a:hover {
+#container > div > a {
+	border: solid #333;
+	border-width: thin;
+}
+#container > div > a:hover {
 	border: solid var(--pink);
 	border-width: thin;
 }
