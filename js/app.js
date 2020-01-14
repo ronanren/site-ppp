@@ -1,5 +1,5 @@
-let observer = null
-const spies = document.querySelectorAll('header, article')
+let observer = null;
+const spies = document.querySelectorAll('header, article');
 
 const activate = function(element) {
     const id = element.getAttribute('id')
