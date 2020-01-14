@@ -42,7 +42,6 @@ body {
     color: #444;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    padding-bottom: 50px;
 }
 
 /* TITRES */
@@ -416,7 +415,7 @@ header img {
     width: 100%;
     display: flex;
     text-align: center;
-    top: 10px;
+    bottom: 10px;
     flex-wrap: wrap;
 }
 
@@ -434,6 +433,7 @@ header img {
     margin-bottom: 0px;
     margin-bottom: 25px;
     padding-top: 10px;
+
     
 }
 
