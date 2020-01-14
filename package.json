@@ -1,0 +1,27 @@
+{
+  "name": "site-ppp",
+  "version": "1.0.0",
+  "description": "Le site Web de PPP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronanren/site-ppp.git"
+  },
+  "keywords": [
+    "ppp",
+    "health"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronanren/site-ppp/issues"
+  },
+  "homepage": "https://github.com/ronanren/site-ppp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  }
+}

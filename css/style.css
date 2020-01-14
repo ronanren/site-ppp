@@ -74,6 +74,7 @@ p {
 /* LIENS */
 a {
     color: white;
+    cursor: pointer;
 }
 
 article:nth-child(odd) a {
@@ -122,7 +123,7 @@ figcaption {
 }
 
 /* NAV */
-body > nav {
+body>nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -134,12 +135,12 @@ body > nav {
     top: 0;
 }
 
-body > nav > div:first-of-type {
+body>nav>div:first-of-type {
     display: block;
     height: auto;
 }
 
-body > nav > div:first-of-type a {
+body>nav>div:first-of-type a {
     display: none;
 }
 
@@ -150,12 +151,12 @@ h1 {
     margin-left: 20px;
 }
 
-body > nav > div {
+body>nav>div {
     display: flex;
     height: 100%;
 }
 
-body > nav > div > div {
+body>nav>div>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,20 +167,20 @@ body > nav > div > div {
     position: relative;
 }
 
-body > nav > div div > a {
+body>nav>div div>a {
     text-decoration: none;
 }
 
-body > nav > div > div:hover {
+body>nav>div>div:hover {
     background-color: #fff;
 }
 
-body > nav > div > div:hover > a {
+body>nav>div>div:hover>a {
     color: #333;
 }
 
 /* SOUS-MENU */
-body > nav > div div div {
+body>nav>div div div {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -188,17 +189,17 @@ body > nav > div div div {
     min-width: 160px;
 }
 
-body > nav > div div div a {
+body>nav>div div div a {
     min-height: 20px;
     line-height: 20px;
     padding: 10px 0;
 }
 
-body > nav > div div:hover div {
+body>nav>div div:hover div {
     display: flex;
 }
 
-body > nav > div div div a:hover {
+body>nav>div div div a:hover {
     background-color: #fff;
     color: #333;
 }
@@ -226,7 +227,7 @@ body > nav > div div div a:hover {
     flex-direction: column;
 }
 
-.more-info > a {
+.more-info>a {
     display: inline-block;
     margin: 0 auto;
     background-color: #fff;
@@ -241,7 +242,7 @@ body > nav > div div div a:hover {
     transition: border 0.2s, width 0.2s;
 }
 
-.more-info > div {
+.more-info>div {
     height: 0;
     overflow: hidden;
     background: #fff;
@@ -251,13 +252,13 @@ body > nav > div div div a:hover {
     transition: opacity .5s;
 }
 
-.more-info.displayed > div {
+.more-info.displayed>div {
     height: 100%;
     padding: 20px;
     opacity: 1;
 }
 
-.more-info.displayed > a {
+.more-info.displayed>a {
     width: 100%;
     padding: 10px 0;
     border-radius: 0;
@@ -315,35 +316,35 @@ footer a {
 
 /* VERSION MOBILE */
 @media (max-width: 600px) {
-    body > nav {
+    body>nav {
         display: none;
         position: fixed;
         left: 0;
         top: 0;
         height: 100vh;
         flex-direction: column;
-        width: 80vw;
+        width: 50vw;
     }
 
-    body > nav.displayed {
+    body>nav.displayed {
         display: flex;
     }
 
-    body > nav > div {
+    body>nav>div {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    body > nav > div > div {
+    body>nav>div>div {
         flex-basis: 70px;
     }
 
-    body > nav > div div:hover div {
+    body>nav>div div:hover div {
         display: none;
     }
 
-    body > nav > div:first-of-type a {
+    body>nav>div:first-of-type a {
         display: block;
         position: fixed;
         top: 15px;
@@ -367,15 +368,51 @@ footer a {
     background-position: left center;
     height: 500px;
     width: 500px;
+    margin: 0 auto;
 }
 
-.displayed {
-    animation: 1s play steps(30);
-    animation-fill-mode: forwards;
+.displayed-3d {
+    animation: 1s play forwards steps(29);
 }
 
 @keyframes play {
-    100% {
-        background-position: -15000px;
+    0% {
+        background-position: 0;
     }
+
+    100% {
+        background-position: -14500px;
+    }
+}
+
+@keyframes playMobile {
+    0% {
+        margin-left: 0%;
+        background-position: 0;
+    }
+
+    100% {
+        margin-left: 20%;
+        background-position: -14500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .displayed-3d {
+        animation: 0.5s playMobile forwards steps(29);
+    }
+}
+
+
+
+
+/* SWUP */
+.transition-fade {
+    transition: 0.4s;
+}
+
+.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateY(-50px);
 }

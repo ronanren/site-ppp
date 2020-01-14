@@ -3,7 +3,6 @@ const spies = document.querySelectorAll('header, article')
 
 const activate = function(element) {
     const id = element.getAttribute('id')
-    console.log(id)
     const anchor = document.querySelector(`a[href="#${id}"]`)
     if (anchor === null)
     {
@@ -67,11 +66,10 @@ let enable = false
 document.querySelector(".mobile-bar a").addEventListener("click", function() {
     if (enable) {
         document.querySelector("body > nav").classList.remove("displayed");
-        document.querySelector("3d-image").classList.remove("displayed");
+        document.querySelector(".image-3d").classList.remove("displayed-3d");
     } else {
         document.querySelector("body > nav").classList.add("displayed");
-        document.querySelector("3d-image").classList.remove("displayed");
-
+        document.querySelector(".image-3d").classList.add("displayed-3d");
     }
 
     enable = !enable;
