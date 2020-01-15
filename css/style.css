@@ -72,7 +72,7 @@ h2 {
     color: var(--pink);
 }
 
-h3 {
+xt {
     color: var(--black);
     text-align: center;
 }
@@ -205,7 +205,6 @@ nav div div div {
     display: none;
     position: absolute;
     top: 60px;
-    left: calc((width - 100%) / 2);
     flex-direction: column;
     width: 100%;
     min-width: 180px;

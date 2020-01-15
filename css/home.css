@@ -48,6 +48,7 @@ header img {
 
 #container div {
     flex-basis: 200px;
+    padding: 0 10px;
 }
 
 #container div p {
@@ -106,6 +107,10 @@ h3 {
     header div:nth-child(2) img {
         max-width: 300px;
     }
+
+    h2 {
+        font-size: 1.7em;  
+    }
 }
 
 #container>div>a {
@@ -129,4 +134,3 @@ h3 {
 .progress-container {
     display: none;
 }
-

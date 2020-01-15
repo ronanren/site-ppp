@@ -1,30 +1,32 @@
-const gulp = require('gulp');
-const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify')
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const cssvariables = require('postcss-css-variables');
 
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+const { src, dest, watch } = require('gulp');
 
-gulp.task('minify-css', () => {
-    return gulp.src('css/!(*.min)*.css')
-        .pipe(cleanCSS())
+function css() {
+    var plugins = [
+        cssvariables(),
+        autoprefixer(),
+        cssnano()
+    ];
+
+    return src('css/!(*.min)*.css')
+        .pipe(postcss(plugins))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(file => file.base))
+        .pipe(dest(file => file.base))
         .pipe(browserSync.stream());
-});
+}
 
-gulp.task('minify-js', function () {
-    return gulp.src('js/!(*.min)*.js')
+function js() {
+    return src('js/!(*.min)*.js')
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
@@ -32,19 +34,24 @@ gulp.task('minify-js', function () {
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(gulp.dest(file => file.base))
+        .pipe(dest(file => file.base))
         .pipe(browserSync.stream())
-});
+}
 
-gulp.task('serve', function() {
+exports.css = css
+exports.js = js
+
+exports.default = function() {
 
     browserSync.init({
         server: "./"
     });
 
-    gulp.watch("css/!(*.min)*.css", gulp.task('minify-css'));
-    gulp.watch("js/!(*.min)*.js", gulp.task('minify-js'));
-    gulp.watch("*.html").on('change', browserSync.reload);
-});
+    css();
+    js();
+    
+    watch('css/!(*.min)*.css', css);
+    watch('js/!(*.min)*.js', js);
+    watch("*.html").on('change', browserSync.reload);
+};
 
-// gulp.task('default', ['serve']);

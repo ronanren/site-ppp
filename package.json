@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/ronanren/site-ppp/issues"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "homepage": "https://github.com/ronanren/site-ppp#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -28,15 +31,20 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/register": "^7.8.3",
     "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "postcss-css-variables": "^0.14.0"
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.4"
   }
 }
