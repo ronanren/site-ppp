@@ -30,12 +30,13 @@
 /* ROOT */
 :root {
     --pink: #ff3860;
-    --dark-grey: #fff;
+    --dark-grey: rgb(56,59,72);
     --grey: #222;
     --light-grey: #ccc;
     --black: #000;
     --white: #fff;
     --border-grey: #ccc;
+    --menu-color: #fff;
    
 }
 
@@ -46,7 +47,8 @@
     --light-grey: #444;
     --black: white;
     --white: #222;
-    --border-grey: #fff;  
+    --border-grey: #fff;
+    --menu-color: rgb(56,59,72);  
 }
 
 html,
@@ -119,7 +121,7 @@ main {
 article:nth-child(even),
 article:nth-child(even) h3 {
     background-color: var(--dark-grey);
-    color: #FFF;
+    color: #fff;
 }
 
 /* IMAGES */
@@ -148,7 +150,7 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
-    background: var(--dark-grey);
+    background: var(--menu-color);
     z-index: 20;
     display: flex;
     justify-content: space-between;
@@ -219,7 +221,7 @@ nav div div div {
     margin: 0;
     height: fit-content;
     padding: 10px;
-    background-color: var(--dark-grey);
+    background-color: var(--menu-color);
 }
 
 nav div div:last-child div {
