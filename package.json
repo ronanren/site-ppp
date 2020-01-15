@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp serve"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -36,8 +36,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "postcss-css-variables": "^0.14.0"
+    "gulp-uglify": "^3.0.2"
   },
   "babel": {
     "presets": [

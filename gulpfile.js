@@ -5,13 +5,11 @@ const uglify = require('gulp-uglify')
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const cssvariables = require('postcss-css-variables');
 
 const { src, dest, watch } = require('gulp');
 
 function css() {
     var plugins = [
-        cssvariables(),
         autoprefixer(),
         cssnano()
     ];
