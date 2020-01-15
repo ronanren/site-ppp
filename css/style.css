@@ -151,32 +151,34 @@ nav a {
 
 nav>div {
     display: flex;
-    margin: 0 20px;
     height: 100%;
+    padding: 0 20px;
+    text-align: center;
 }
 
 nav div div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
+    padding: 0 20px;
     height: 59px;
     z-index: 21;
+    position: relative;
 }
 
 nav div div.selected {
     border-bottom: 2px solid var(--blue);
 }
 
-nav div div.selected a {
+nav > div > div.selected > a {
     color: var(--blue);
 }
 
-nav div div:hover a {
+nav > div > div:hover > a {
     color: var(--blue);
 }
 
-nav div div a {
+nav > div > div > a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +194,42 @@ nav > div > a:first-child {
 /* SOUS-MENUS */
 nav div div div {
     display: none;
+    position: absolute;
+    top: 60px;
+    left: calc((width - 100%) / 2);
+    flex-direction: column;
+    width: 100%;
+    min-width: 180px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-grey);
+    margin: 0;
+    height: fit-content;
+    padding: 10px;
+    background-color: var(--white);
+}
+
+nav div div:last-child div {
+    right: 0;
+    left: auto;
+}
+
+nav div div div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 1em;
+    text-align: center;
+    color: var(--grey);
+}
+
+nav > div > div > div > a:hover {
+    color: var(--blue);
+}
+
+nav div div:hover div {
+    display: flex;
 }
 
 /* PROGRESS SCROLL */
