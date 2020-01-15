@@ -31,6 +31,10 @@
 :root {
     --pink: #ff3860;
     --blue: #0054fc;
+    --grey: #444;
+    --light-grey: #ccc;
+    --black: #000;
+    --white: #fff;
 }
 
 html,
@@ -39,15 +43,16 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: var(--grey);
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 /* TITRES */
-h1,
-h2 {
+h1 {
     font-weight: 700;
+    margin: 0 20px;
+    line-height: 60px;
     color: var(--pink);
 }
 
@@ -55,30 +60,31 @@ h2 {
     font-weight: 300;
     text-align: center;
     font-size: 2.2em;
+    color: var(--pink);
 }
 
 h3 {
-    color: #000;
+    color: var(--black);
     text-align: center;
 }
 
 /* PARAGRAPHES */
-.indentation {
-    text-indent: 50px;
-}
-
 p {
     text-align: justify;
 }
 
+.indentation {
+    text-indent: 50px;
+}
+
 /* LIENS */
 a {
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 
 article:nth-child(odd) a {
-    color: #444;
+    color: var(--grey);
 }
 
 /* ÉLÉMENTS */
@@ -123,91 +129,75 @@ figcaption {
 }
 
 /* NAV */
-body>nav {
+nav {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--white);
+    z-index: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    z-index: 11;
-    height: 56px;
-    width: 100%;
-    top: 0;
+    color: var(--grey);
+    border-bottom: 1px solid var(--light-grey);
+    height: 60px;
 }
 
-body>nav>div:first-of-type {
-    display: block;
-    height: auto;
-}
-
-body>nav>div:first-of-type a {
-    display: none;
-}
-
-h1 {
-    background-color: #fff;
-    padding: 5px 30px;
-    border-radius: 1em;
-    margin-left: 20px;
-}
-
-body>nav>div {
-    display: flex;
-    height: 100%;
-}
-
-body>nav>div>div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-body>nav>div div>a {
+nav a {
+    color: var(--black);
     text-decoration: none;
 }
 
-body>nav>div>div:hover {
-    background-color: #fff;
-}
-
-body>nav>div>div:hover>a {
-    color: #333;
-}
-
-/* SOUS-MENU */
-body>nav>div div div {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 56px;
-    background-color: #333;
-    min-width: 160px;
-}
-
-body>nav>div div div a {
-    min-height: 20px;
-    line-height: 20px;
-    padding: 10px 0;
-}
-
-body>nav>div div:hover div {
+nav>div {
     display: flex;
+    margin: 0 20px;
+    height: 100%;
 }
 
-body>nav>div div div a:hover {
-    background-color: #fff;
-    color: #333;
+nav div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    height: 59px;
+    z-index: 21;
+}
+
+nav div div.selected {
+    border-bottom: 2px solid var(--blue);
+}
+
+nav div div.selected a {
+    color: var(--blue);
+}
+
+nav div div:hover a {
+    color: var(--blue);
+}
+
+nav div div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* LOGO */
+nav > div > a:first-child {
+    display: none;
+}
+
+/* SOUS-MENUS */
+nav div div div {
+    display: none;
 }
 
 /* PROGRESS SCROLL */
 .progress-container {
     position: fixed;
-    top: 56px;
+    bottom: 0;
     z-index: 10;
     width: 100%;
     height: 4px;
@@ -221,6 +211,11 @@ body>nav>div div div a:hover {
     width: 0%;
 }
 
+/* MOBILE BAR */
+.mobile-bar {
+    display: none;
+}
+
 /* MORE INFO */
 .more-info {
     display: flex;
@@ -230,8 +225,8 @@ body>nav>div div div a:hover {
 .more-info>a {
     display: inline-block;
     margin: 0 auto;
-    background-color: #fff;
-    color: #444;
+    background-color: var(--white);
+    color: var(--grey);
     border-radius: 1em;
     padding: 10px 50px;
     text-align: center;
@@ -245,9 +240,9 @@ body>nav>div div div a:hover {
 .more-info>div {
     height: 0;
     overflow: hidden;
-    background: #fff;
+    background: var(--white);
     text-align: justify;
-    color: #444;
+    color: var(--grey);
     opacity: 0;
     transition: opacity .5s;
 }
@@ -262,101 +257,16 @@ body>nav>div div div a:hover {
     width: 100%;
     padding: 10px 0;
     border-radius: 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--black);
 }
 
-/* SÉCURITÉ*/
-.chiffrement-mobile {
-    display: none;
-}
-
-@media screen and (max-width: 750px) {
-    .chiffrement {
-        display: none;
-    }
-
-    .chiffrement-mobile {
-        display: block;
-    }
-}
-
+/* FOOTER */
 footer {
     padding: 50px 7%;
 }
 
 footer a {
     color: var(--pink);
-}
-
-/* MOBILE BAR */
-.mobile-bar {
-    background-color: #333;
-    height: 56px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    z-index: 10;
-}
-
-.mobile-bar a {
-    position: fixed;
-    top: 3px;
-    left: 10px;
-}
-
-.mobile-bar h1 {
-    margin: 0 auto;
-    padding: 5px 30px;
-    font-size: 1.5em;
-}
-
-/* VERSION MOBILE */
-@media (max-width: 600px) {
-    body>nav {
-        display: none;
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        flex-direction: column;
-        width: 50vw;
-    }
-
-    body>nav.displayed {
-        display: flex;
-    }
-
-    body>nav>div {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    body>nav>div>div {
-        flex-basis: 70px;
-    }
-
-    body>nav>div div:hover div {
-        display: none;
-    }
-
-    body>nav>div:first-of-type a {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 10px;
-    }
-}
-
-/* VERSION ORDINATEUR */
-@media (min-width: 600px) {
-    .mobile-bar {
-        display: none;
-    }
 }
 
 /* 3D image */
@@ -405,14 +315,17 @@ footer a {
 }
 
 
-
-
-/* SWUP */
-.transition-fade {
-    transition: 0.4s;
+/* SÉCURITÉ*/
+.chiffrement-mobile {
+    display: none;
 }
 
-.is-animating .transition-fade {
-    opacity: 0;
-    transform: translateY(-50px);
+@media screen and (max-width: 750px) {
+    .chiffrement {
+        display: none;
+    }
+
+    .chiffrement-mobile {
+        display: block;
+    }
 }

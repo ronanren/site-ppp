@@ -20,6 +20,7 @@ gulp.task('minify-css', () => {
             suffix: '.min'
         }))
         .pipe(gulp.dest(file => file.base))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('minify-js', function () {
@@ -32,8 +33,18 @@ gulp.task('minify-js', function () {
             suffix: ".min"
         }))
         .pipe(gulp.dest(file => file.base))
+        .pipe(browserSync.stream())
 });
 
-gulp.task('default', function () {
-    gulp.task('browser-sync')
+gulp.task('serve', function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch("css/!(*.min)*.css", gulp.task('minify-css'));
+    gulp.watch("js/!(*.min)*.js", gulp.task('minify-js'));
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
+
+// gulp.task('default', ['serve']);
