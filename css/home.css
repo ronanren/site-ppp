@@ -1,5 +1,23 @@
+:root {
+    --pink: #ff3860;
+    --blue: #0054fc;
+    --grey: #ccc;
+    --light-grey: #ccc;
+    --black: #000;
+    --white: #fff;
+}
+
+[data-theme="dark"] {
+    --pink: #ff3860;
+    --blue: #0054fc;
+    --grey: #444;
+    --light-grey: #444;
+    --black: #fff;
+    --white: #222;
+}
+
 body {
-    background-color: #222;
+    background-color: var(--white);
 }
 
 header {
@@ -63,8 +81,11 @@ a h2 {
 
 a p {
     text-align: center;
-    color: white;
+    color: var(--black);
+}
 
+h3 {
+    font-weight: 300;
 }
 
 @media screen and (max-width: 1250px) {
@@ -103,62 +124,9 @@ a p {
     border-width: thin;
 }
 
-/* NAV */
-body>nav {
-    background: #222;
-}
-
-body>nav a {
-    color: #fff;
-}
-
-body>nav div div:hover a {
-    color: #ff3860;
-}
 
 /* PROGRESS SCROLL */
 .progress-container {
     display: none;
 }
 
-.checkbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.checkbox input {
-  display: none;
-}
-
-.checkbox label {
-  display: block;
-  width: 45px;
-  height: 24px;
-  background: #CCC;
-  border-radius: 3em;
-  position: relative;
-}
-
-.checkbox label::before {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  display: block;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-color: #FFF;
-  border-radius: 50%;
-
-  transition: 0.2s left, 0.2s background;
-}
-
-.checkbox input:checked + label {
-  background: var(--pink);
-}
-
-.checkbox input:checked + label::before {
-  left: 22px;
-}
