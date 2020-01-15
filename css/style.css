@@ -119,7 +119,8 @@ main {
 
 /* ZONES BLEUS */
 article:nth-child(even),
-article:nth-child(even) h3 {
+article:nth-child(even) h3,
+article:nth-child(even) a {
     background-color: var(--dark-grey);
     color: #fff;
 }
@@ -424,4 +425,8 @@ footer a {
 
 .checkbox input:checked + label::before {
   left: 22px;
+}
+
+.checkbox img {
+    margin-right: 10px;
 }
