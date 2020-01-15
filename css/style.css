@@ -30,22 +30,23 @@
 /* ROOT */
 :root {
     --pink: #ff3860;
-    --blue: #0054fc;
+    --dark-grey: #fff;
     --grey: #222;
     --light-grey: #ccc;
     --black: #000;
     --white: #fff;
+    --border-grey: #ccc;
    
 }
 
 [data-theme="dark"] {
     --pink: #ff3860;
-    --blue: #0054fc;
+    --dark-grey: rgb(56,59,72);
     --grey: #fff;
     --light-grey: #444;
     --black: white;
     --white: #222;
-    
+    --border-grey: #fff;  
 }
 
 html,
@@ -117,7 +118,7 @@ main {
 /* ZONES BLEUS */
 article:nth-child(even),
 article:nth-child(even) h3 {
-    background-color: var(--pink);
+    background-color: var(--dark-grey);
     color: #FFF;
 }
 
@@ -147,13 +148,13 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
-    background: var(--white);
+    background: var(--dark-grey);
     z-index: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--grey);
-    border-bottom: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--border-grey);
     height: 60px;
 }
 
@@ -218,7 +219,7 @@ nav div div div {
     margin: 0;
     height: fit-content;
     padding: 10px;
-    background-color: var(--white);
+    background-color: var(--dark-grey);
 }
 
 nav div div:last-child div {
