@@ -4,38 +4,19 @@ body {
 
 header {
     display: flex;
-    flex-wrap: wrap;
 }
 
-header h2 {
-    position: relative;
-    width: 50%;
-    background-color: #222;
-    float: left;
-    text-align: justify;
-    order: 1;
-}
-
-h3 {
-    position: relative;
-    float: left;
-    width: 50%;
-    color: #999;
-    font-weight: 300;
-    text-align: justify;
-    order: 3;
-    bottom: 120px;
+header div {
+    margin: 0 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header img {
-    position: relative;
-    width: 40%;
-    height: auto;
-    float: right;
-    border-radius: 10%;
-    margin: auto;
-    order: 2;
-    top: 50px;
+    width: 100%;
 }
 
 #container {
@@ -92,22 +73,17 @@ a p {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     header {
         flex-direction: column;
     }
 
-    header img {
-        display: none;
+    header div:first-child {
+        order: 1;
     }
 
-    header h2 {
-        width: 100%;
-        font-size: 1.8em;
-    }
-
-    h3 {
-        width: 100%;
+    header div:nth-child(2) img {
+        max-width: 300px;
     }
 }
 
