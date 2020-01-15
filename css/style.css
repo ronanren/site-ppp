@@ -31,7 +31,7 @@
 :root {
     --pink: #ff3860;
     --blue: #0054fc;
-    --grey: #444;
+    --grey: #222;
     --light-grey: #ccc;
     --black: #000;
     --white: #fff;
@@ -40,10 +40,10 @@
 [data-theme="dark"] {
     --pink: #ff3860;
     --blue: #0054fc;
-    --grey: #ccc;
+    --grey: #444;
     --light-grey: #444;
     --black: #fff;
-    --white: #000;
+    --white: #222;
 }
 
 html,
@@ -55,6 +55,7 @@ body {
     color: var(--grey);
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 /* TITRES */
@@ -113,7 +114,7 @@ main {
 /* ZONES BLEUS */
 article:nth-child(even),
 article:nth-child(even) h3 {
-    background-color: var(--blue);
+    background-color: var(--grey);
     color: #FFF;
 }
 
@@ -184,7 +185,7 @@ nav > div > div.selected > a {
 }
 
 nav > div > div:hover > a {
-    color: var(--blue);
+    color: var(--pink);
 }
 
 nav > div > div > a {
@@ -230,11 +231,11 @@ nav div div div a {
     padding: 10px 0;
     height: 1em;
     text-align: center;
-    color: var(--grey);
+    color: var(--black);
 }
 
 nav > div > div > div > a:hover {
-    color: var(--blue);
+    color: var(--pink);
 }
 
 nav div div:hover div {
