@@ -287,6 +287,8 @@ nav.displayed {
     left: 10px;
 }
 
+
+
 /* MENU MOBILE */
 @media (max-width: 700px) {
     nav {
@@ -338,6 +340,34 @@ nav.displayed {
 
     .mobile-bar {
         display: flex;
+    }
+}
+
+nav.displayed {
+    animation: .2s fondu forwards, .7s leftAppear forwards;
+}
+
+nav.displayed div:first-child a:first-child {
+    animation: 1s fondu;
+}
+
+@keyframes fondu {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes leftAppear {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
     }
 }
 
