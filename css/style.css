@@ -269,11 +269,16 @@ nav.displayed {
     top: 0;
     left: 0;
     z-index: 12;
+    border-bottom: 1px solid var(--border-grey);
 }
 
 .mobile-bar a svg {
     height: 40px;
     width: 40px;
+}
+
+.mobile-bar a svg path {
+    fill: var(--black);
 }
 
 .mobile-bar a {
