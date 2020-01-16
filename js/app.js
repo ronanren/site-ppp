@@ -52,25 +52,20 @@ window.onscroll = function() {
 }
 
 /* ENABLE MENU MOBILE */
-let enable = false
 
 document.querySelector(".mobile-bar a").addEventListener("click", function() {
-    if (enable) {
-        document.querySelector("body > nav").classList.remove("displayed");
-        document.querySelector(".image-3d").classList.remove("displayed-3d");
-    } else {
+
         document.querySelector("body > nav").classList.add("displayed");
         document.querySelector(".image-3d").classList.add("displayed-3d");
-    }
+        document.querySelector(".image-3d").classList.remove("hidden-3d");
 
-    enable = !enable;
 });
 
-document.querySelector("body > nav > div:first-of-type a").addEventListener("click", function() {
+document.querySelector("nav > div:first-child > a:first-child").addEventListener('click', function() {
     document.querySelector("body > nav").classList.remove("displayed");
-    enable = false;
+    document.querySelector(".image-3d").classList.remove("displayed-3d");
+    document.querySelector(".image-3d").classList.add("hidden-3d");
 });
-
 
 const toggleSwitch = document.querySelector('.checkbox input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');

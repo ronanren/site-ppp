@@ -252,6 +252,90 @@ nav div div:hover div {
     display: flex;
 }
 
+nav.displayed {
+    display: flex;
+}
+
+/* MOBILE BAR */
+.mobile-bar {
+    display: none;
+    height: 60px;
+    width: 100vw;
+    background-color: var(--menu-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+}
+
+.mobile-bar a svg {
+    height: 40px;
+    width: 40px;
+}
+
+.mobile-bar a {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* MENU MOBILE */
+@media (max-width: 700px) {
+    nav {
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        display: none;
+    }
+
+    nav > div:first-child a:first-child {
+        display: block;
+        position: absolute;
+        top: 27px;
+        left: 15px;
+    }
+
+    nav > div:first-child a:first-child svg {
+        height: 36px;
+        width: 36px;
+    }
+
+    nav > div:first-child a:first-child svg path {
+        fill: var(--black);
+    }
+
+    nav > div:first-child {
+        height: fit-content;
+        font-size: 1.5em;
+        padding-top: 15px;
+    }
+
+    nav > div:last-child {
+        padding: 50px 0;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+
+    nav > div:last-child > div:first-child {
+        position: absolute;
+        bottom: 20px;
+        order: 5;
+    }
+
+    nav > div > div:hover > div {
+        display: none;
+    }
+
+    .mobile-bar {
+        display: flex;
+    }
+}
+
 /* PROGRESS SCROLL */
 .progress-container {
     position: fixed;
@@ -269,55 +353,6 @@ nav div div:hover div {
     width: 0%;
 }
 
-/* MOBILE BAR */
-.mobile-bar {
-    display: none;
-}
-
-/* MORE INFO */
-.more-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.more-info>a {
-    display: inline-block;
-    margin: 0 auto;
-    background-color: var(--white);
-    color: var(--grey);
-    border-radius: 1em;
-    padding: 10px 50px;
-    text-align: center;
-    flex-basis: fit-content;
-    text-decoration: none;
-    cursor: pointer;
-    width: 50%;
-    transition: border 0.2s, width 0.2s;
-}
-
-.more-info>div {
-    height: 0;
-    overflow: hidden;
-    background: var(--white);
-    text-align: justify;
-    color: var(--grey);
-    opacity: 0;
-    transition: opacity .5s;
-}
-
-.more-info.displayed>div {
-    height: 100%;
-    padding: 20px;
-    opacity: 1;
-}
-
-.more-info.displayed>a {
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 0;
-    border-bottom: 1px solid var(--black);
-}
-
 /* FOOTER */
 footer {
     padding: 50px 7%;
@@ -327,11 +362,7 @@ footer a {
     color: var(--pink);
 }
 
-/* 3D image */
-.coeur-3d {
-    background-image: url('../img/coeur.png');
-}
-
+/* 3D IMAGE */
 .image-3d {
     background-position: left center;
     height: 500px;
@@ -339,8 +370,24 @@ footer a {
     margin: 0 auto;
 }
 
+.coeur-3d {
+    background-image: url('../img/coeur.png');
+}
+
+@media (max-width: 550px) {
+    .image-3d {
+        background-position: -50px center;
+        height: 400px;
+        width: 400px;
+    }
+}
+
 .displayed-3d {
     animation: 1s play forwards steps(29);
+}
+
+.hidden-3d {
+    animation: 1s play backwards steps(29);
 }
 
 @keyframes play {
@@ -366,29 +413,17 @@ footer a {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .displayed-3d {
         animation: 0.5s playMobile forwards steps(29);
     }
-}
 
-
-/* SÉCURITÉ*/
-.chiffrement-mobile {
-    display: none;
-}
-
-@media screen and (max-width: 750px) {
-    .chiffrement {
-        display: none;
-    }
-
-    .chiffrement-mobile {
-        display: block;
+    .hidden-3d {
+        animation: 0.5s playMobile reverse backwards steps(29);
     }
 }
 
-/* Checkbox Dark/Light Mode */
+/* CHECKBOX DARK MODE */
 .checkbox {
   display: flex;
   flex-direction: row;
@@ -435,4 +470,19 @@ footer a {
     margin-right: 10px;
     width: 26px;
     height: auto;
+}
+
+/* SÉCURITÉ*/
+.chiffrement-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .chiffrement {
+        display: none;
+    }
+
+    .chiffrement-mobile {
+        display: block;
+    }
 }
