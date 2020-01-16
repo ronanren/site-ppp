@@ -51,15 +51,6 @@ window.onscroll = function() {
     document.getElementById("scroll-indicator").style.width = scrolled + "%";
 }
 
-/* MORE INFO */
-document.querySelectorAll(".more-info > a")
-.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        e.target.parentNode.classList.add("displayed")
-
-    })
-})
-
 /* ENABLE MENU MOBILE */
 let enable = false
 

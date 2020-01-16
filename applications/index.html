@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Applications</title>
     <link rel="stylesheet" type="text/css" href="../css/style.min.css" />
+    <meta name="description" content="Découvrez comment les applications fonctionnent, communiquent, calculent et enregistrent vos données." />
 </head>
 
 <body>
@@ -26,7 +27,7 @@
         </div>
         <div>
             <div class="checkbox">
-                <img src="../img/brightness.png" alt="icon luminosité" width="26px" />
+                <img src="../img/brightness.png" alt="icon luminosité" />
                 <input type="checkbox" name="dark-mode" id="dark-mode" />
                 <label for="dark-mode"></label>
             </div>
@@ -102,30 +103,35 @@
                 suffisante : le Bluetooth.
             </p>
 
-            <div class="more-info">
-                <a>Plus d'informations sur la série de Fourier</a>
-                <div>
-                    La récupération des données depuis des appareils connectés peut se faire de plusieurs façons :
-                    connexion Bluetooth, Wifi, cable USB, réseaux mobiles, etc… Ici, nous détaillerons le type de
-                    connexion le plus courant suite à un coût faible, une simplicité d’utilisation et de mise en place
-                    et une efficacité suffisante : le Bluetooth.
+            <p>
+                Le Bluetooth établit une transmission d'information entre deux informations via l'encodage, l'émission,
+                la réception et le décodage d'un signal à l'aide d'une puce dédiée.
+                Prenons l'exemple d'un téléphone souhaitant se connecter à une montre connecté. Pour débuter la
+                connexion, l'objet connecté va émettre un signal "ping" qui va permettre à n'importe quelle appareil de
+                connaître la présence de l'appareil. Nous pouvons ensuite nous connecter à cette montre via notre
+                smartphone. Cela forme un "picoréseau" où le téléphone est "maître" et le téléphone "esclave".
+                Les appareils communiquent ensuite entre eux avec des ondes radios courtes d'environ 15 mètres compris
+                dans une bande de fréquence variant entre 2.4 GHz à 2.485 GHz. Cette bande de fréquence est divisée en
+                canaux de 1 Mhz soit 79 canaux. Ensuite, pour communiquer, le Bluetooth utilise le "Frequency Hopping
+                Spread Spectrum". Le FHSS repose sur le princie de changer très rapidement de canaux de fréquence dans
+                un ordre connu à l'avance car un "saut de fréquence" déterminée. Ce saut de fréquence permet d'éviter
+                les interférences.
+            </p>
 
-                    La récupération des données depuis des appareils connectés peut se faire de plusieurs façons :
-                    connexion Bluetooth, Wifi, cable USB, réseaux mobiles, etc… Ici, nous détaillerons le type de
-                    connexion le plus courant suite à un coût faible, une simplicité d’utilisation et de mise en place
-                    et une efficacité suffisante : le Bluetooth.
 
-                    La récupération des données depuis des appareils connectés peut se faire de plusieurs façons :
-                    connexion Bluetooth, Wifi, cable USB, réseaux mobiles, etc… Ici, nous détaillerons le type de
-                    connexion le plus courant suite à un coût faible, une simplicité d’utilisation et de mise en place
-                    et une efficacité suffisante : le Bluetooth.
+            <p>
+                Le Bluetooth très répandu est une technologie sécurisée. Tout d'abord grâce une couche bande de base qui
+                définit une adresse matérielle unique pour le périphérique Bluetooth appelée BR_ADDR codée sur 48 bits.
+                Cependant, il existe une couche Link Manager qui gère l'authentification, le pairage, la création et
+                modification des clés et le cryptage des données envoyés.
+            </p>
 
-                    La récupération des données depuis des appareils connectés peut se faire de plusieurs façons :
-                    connexion Bluetooth, Wifi, cable USB, réseaux mobiles, etc… Ici, nous détaillerons le type de
-                    connexion le plus courant suite à un coût faible, une simplicité d’utilisation et de mise en place
-                    et une efficacité suffisante : le Bluetooth.
-                </div>
-            </div>
+            <p>
+                Le Bluetooth est idéale pour les objets connectés car il très peu gourmand en énergie. Depuis quelques
+                années le Bluetooth à base consommation créée par Nokia en 2006 devient de plus en plus courant
+                notamment dans les petits objets connnectés. Il a une consommation 10 fois moindre que le Bluetooth
+                standard.
+            </p>
         </article>
 
         <!-- TRAITEMENT -->
@@ -209,10 +215,7 @@
         </article>
     </main>
 
-
-    <!--build:js js/main.min.js -->
     <script src="../js/app.min.js"></script>
-    <!-- endbuild -->
 </body>
 
 </html>
