@@ -22,6 +22,8 @@ body {
 
 header {
     display: flex;
+    scroll-snap-align: none;
+    min-height: 100%;
 }
 
 header div {
