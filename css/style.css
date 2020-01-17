@@ -427,6 +427,37 @@ nav.displayed div:first-child a:first-child {
     width: 0%;
 }
 
+/* SCROLL TO TOP */
+.scroll-to-top {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 50px;
+    right: 50px;
+    z-index: 30;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.scroll-to-top a {
+    display: block;
+    background-color: var(--pink);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.scroll-to-top svg {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+
+
 /* FOOTER */
 footer {
     padding: 50px 7%;

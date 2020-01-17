@@ -109,3 +109,6 @@ dist
 # Minified file
 css/*.min.css
 js/*.min.js
+
+# Blender
+*.blend1
