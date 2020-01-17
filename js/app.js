@@ -52,23 +52,39 @@ window.onscroll = function() {
 }
 
 /* ENABLE MENU MOBILE */
+function showMenu() {
+	document.querySelector("body > nav").classList.add("displayed");
+	document.querySelector(".image-3d div").classList.remove("hidden-3d");
+	document.querySelector(".image-3d div").classList.add("displayed-3d");
+}
 
-document.querySelector(".mobile-bar a").addEventListener("click", function() {
-        document.querySelector("body > nav").classList.add("displayed");
-        document.querySelector(".image-3d div").classList.remove("hidden-3d");
-        document.querySelector(".image-3d div").classList.add("displayed-3d");
-});
-
-document.querySelector("nav > div:first-child > a:first-child").addEventListener('click', function() {
-    document.querySelector("body > nav").classList.remove("displayed");
+function hideMenu() {
+	document.querySelector("body > nav").classList.remove("displayed");
     document.querySelector(".image-3d div").classList.add("hidden-3d");
     document.querySelector(".image-3d div").classList.remove("displayed-3d");
 
     setTimeout(function() {
         document.querySelector(".image-3d div").classList.remove("hidden-3d");
     }, 1000);
-});
+}
 
+function isEnable() {
+	return document.querySelector("body > nav").classList.contains("displayed");
+}
+
+document.querySelector(".mobile-bar a").addEventListener("click", showMenu);
+
+document.querySelector("nav > div:first-child > a:first-child").addEventListener('click', hideMenu);
+
+window.onresize = function() {
+	if (window.innerWidth > 700 && isEnable()) {
+		document.querySelector("body > nav").classList.remove("displayed");
+		document.querySelector(".image-3d div").classList.remove("hidden-3d");
+		document.querySelector(".image-3d div").classList.remove("displayed-3d");
+	}
+}
+
+/* DARK MODE */
 const toggleSwitch = document.querySelector('.checkbox input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
