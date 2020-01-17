@@ -446,6 +446,11 @@ footer a {
     background-image: url('../img/coeur.png');
 }
 
+.cadenas-3d {
+    background-image: url('../img/cadenas.png');
+}
+
+
 .displayed-3d {
     animation: 1s play forwards steps(29);
 }
