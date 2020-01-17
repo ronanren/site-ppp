@@ -76,6 +76,12 @@ h1 {
     color: var(--pink);
 }
 
+@media (max-width: 450px) {
+	nav h1 {
+		font-size: 1em;
+	}
+}
+
 h2 {
     font-weight: 300;
     text-align: center;
@@ -287,9 +293,15 @@ nav.displayed {
     left: 10px;
 }
 
-
-
 /* MENU MOBILE */
+nav.displayed {
+    animation: .2s fondu forwards, .7s leftAppear forwards;
+}
+
+nav.displayed div:first-child a:first-child {
+    animation: 1s fondu;
+}
+
 @media (max-width: 700px) {
     nav {
         position: fixed;
@@ -343,12 +355,20 @@ nav.displayed {
     }
 }
 
-nav.displayed {
-    animation: .2s fondu forwards, .7s leftAppear forwards;
-}
+@media (max-width: 500px) {
+	nav {
+		width: 70vw;
+	}
+	nav > div:first-child > a:first-child {
+		left: 10px;
+		top: 33px;
+	}
+	
+	nav > div:first-child > a:first-child svg {
+		width: 25px;
+		height: 25px;
 
-nav.displayed div:first-child a:first-child {
-    animation: 1s fondu;
+	}
 }
 
 @keyframes fondu {
@@ -368,6 +388,16 @@ nav.displayed div:first-child a:first-child {
 
     100% {
         width: 50%;
+    }
+}
+
+@keyframes leftAppear700 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
     }
 }
 
@@ -466,6 +496,12 @@ footer a {
     .displayed-3d {
         animation: 0.5s playMobile forwards steps(29);
     }
+}
+
+@media (max-width: 400px) {
+	.image-3d {
+		display: none;
+	}
 }
 
 /* CHECKBOX DARK MODE */
