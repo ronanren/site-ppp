@@ -405,10 +405,10 @@ footer a {
 }
 
 .image-3d div {
-    background-position: left center;
+    background-position: -75px;
     background-repeat: no-repeat;
     height: 300px;
-    width: 500px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -437,24 +437,24 @@ footer a {
 @keyframes playMobile {
     0% {
         margin: 0;
-        background-position: 0;
+        background-position: -75px;
     }
 
     100% {
-        margin: 0 0 0 25%;
+        margin: 0 0 0 7%;
         background-position: -14500px;
     }
 }
 
 @keyframes playMobileReverse {
     0% {
-        margin: 0 0 0 25%;
+        margin: 0 0 0 7%;
         background-position: -14500px;
     }
 
     100% {
         margin: 0;
-        background-position: 0;
+        background-position: -75px;
     }
 }
 
@@ -465,87 +465,6 @@ footer a {
 
     .displayed-3d {
         animation: 0.5s playMobile forwards steps(29);
-    }
-}
-
-
-
-/* SMALL DEVICES */
-@keyframes playMobileSmall {
-    0% {
-        margin: 0;
-        background-position: -50px;
-    }
-
-    100% {
-        margin: 0 0 0 15%;
-        background-position: -14500px;
-    }
-}
-
-@keyframes playMobileReverseSmall {
-    0% {
-        margin: 0 0 0 15%;
-        background-position: -14500px;
-    }
-
-    100% {
-        margin: 0;
-        background-position: -50px;
-    }
-}
-
-@media (max-width: 550px) {
-    .image-3d div {
-        background-position: -50px 0;
-        width: 400px;
-    }
-
-    .hidden-3d {
-        animation: 0.5s playMobileReverseSmall forwards steps(29);
-    }
-
-    .displayed-3d {
-        animation: 0.5s playMobileSmall forwards steps(29);
-    }
-}
-
-@keyframes playMobileExtraSmall {
-    0% {
-        margin: 0;
-        background-position: -75px;
-    }
-
-    100% {
-        margin: 0 0 0 10%;
-        background-position: -14500px;
-    }
-}
-
-@keyframes playMobileReverseExtraSmall {
-    0% {
-        margin: 0 0 0 10%;
-        background-position: -14500px;
-    }
-
-    100% {
-        margin: 0;
-        background-position: -75px;
-    }
-}
-
-@media (max-width: 450px) {
-    .image-3d div {
-        background-position: -75px;
-        width: 350px;
-    }
-
-    .hidden-3d {
-        animation: 0.5s playMobileReverseExtraSmall forwards steps(29);
-    }
-
-    .displayed-3d {
-        animation: 0.5s playMobileExtraSmall forwards steps(29);
     }
 }
 
