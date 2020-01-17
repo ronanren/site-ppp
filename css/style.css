@@ -450,56 +450,64 @@ footer a {
     background-image: url('../img/cadenas.png');
 }
 
-
-.displayed-3d {
-    animation: 1s play forwards steps(29);
-}
-
-.hidden-3d {
-    animation: 1s play backwards steps(29);
-}
-
-@keyframes play {
+@keyframes playHeart {
     0% {
-        background-position: 0;
+        margin: 0;
     }
 
     100% {
-        background-position: -14500px;
+        margin: 0 0 0 7%;
+    }
+}
+
+@keyframes playReverseHeart {
+    0% {
+        margin: 0 0 0 7%;
+    }
+
+    100% {
+        margin: 0;
     }
 }
 
 @keyframes playMobile {
     0% {
-        margin: 0;
         background-position: -75px;
     }
 
     100% {
-        margin: 0 0 0 7%;
         background-position: -14500px;
     }
 }
 
 @keyframes playMobileReverse {
     0% {
-        margin: 0 0 0 7%;
         background-position: -14500px;
     }
 
     100% {
-        margin: 0;
         background-position: -75px;
     }
 }
 
 @media (max-width: 700px) {
+
+
+
     .hidden-3d {
         animation: 0.5s playMobileReverse forwards steps(29);
     }
 
     .displayed-3d {
         animation: 0.5s playMobile forwards steps(29);
+    }
+
+    .hidden-3d.coeur-3d {
+        animation: playMobileReverse 0.5s forwards steps(29), playHeartReverse 0.5s forwards;
+    }
+
+    .displayed-3d.coeur-3d {
+        animation: playMobile 0.5s forwards steps(29), playHeart 0.5s forwards;
     }
 }
 
