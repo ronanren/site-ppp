@@ -636,6 +636,6 @@ footer a {
     display: block;
 }
 
-.google-fit img, .piconet img {
+.google-fit img, .piconet img, .linear-regression img {
     max-width: 300px;
 }
