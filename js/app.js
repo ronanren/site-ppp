@@ -17,19 +17,24 @@ window.onscroll = function() {
 
 /* ENABLE MENU MOBILE */
 function showMenu() {
-	document.querySelector("body > nav").classList.add("displayed");
-	document.querySelector(".image-3d div").classList.remove("hidden-3d");
-	document.querySelector(".image-3d div").classList.add("displayed-3d");
+    document.querySelector("body > nav").classList.add("displayed");
+    if (document.querySelector(".image-3d div")) {
+        document.querySelector(".image-3d div").classList.remove("hidden-3d");
+        document.querySelector(".image-3d div").classList.add("displayed-3d");
+    }
+
 }
 
 function hideMenu() {
-	document.querySelector("body > nav").classList.remove("displayed");
-    document.querySelector(".image-3d div").classList.add("hidden-3d");
-    document.querySelector(".image-3d div").classList.remove("displayed-3d");
+    document.querySelector("body > nav").classList.remove("displayed");
+    if (document.querySelector(".image-3d div")) {
+        document.querySelector(".image-3d div").classList.add("hidden-3d");
+        document.querySelector(".image-3d div").classList.remove("displayed-3d");
 
-    setTimeout(function() {
-        document.querySelector(".image-3d div").classList.remove("hidden-3d");
-    }, 1000);
+        setTimeout(function() {
+            document.querySelector(".image-3d div").classList.remove("hidden-3d");
+        }, 1000);
+    }
 }
 
 function isEnable() {
@@ -50,9 +55,11 @@ window.onresize = function() {
 
 /* DARK MODE */
 const toggleSwitch = document.querySelector('.checkbox input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
+let currentTheme = 'light';
 
-if (!window.localStorage) {
+try {
+    currentTheme = localStorage.getItem('theme');
+} catch(e) {
     currentTheme = 'light';
 }
 
@@ -67,11 +74,19 @@ if (currentTheme) {
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+        try {
+            localStorage.setItem('theme', 'dark');
+        } catch(e) {
+            console.log('Localstorage impossible')
+        }
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
+        try {
+            localStorage.setItem('theme', 'light');
+        } catch(e) {
+            console.log('Localstorage impossible')
+        }
     }    
 }
 
