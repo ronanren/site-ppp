@@ -490,6 +490,10 @@ footer a {
     background-image: url('../img/cadenas.png');
 }
 
+.watch-3d {
+    background-image: url('../img/watch-3d.png');
+}
+
 @keyframes playHeart {
     0% {
         margin: 0;
