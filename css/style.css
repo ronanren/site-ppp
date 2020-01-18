@@ -472,6 +472,7 @@ footer a {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .image-3d div {
@@ -535,9 +536,6 @@ footer a {
 }
 
 @media (max-width: 700px) {
-
-
-
     .hidden-3d {
         animation: 0.5s playMobileReverse forwards steps(29);
     }
@@ -623,4 +621,25 @@ footer a {
     .chiffrement-mobile {
         display: block;
     }
+}
+
+/* APPLICATIONS */
+.linear-regression {
+    max-width: 500px;
+}
+
+[data-theme="dark"] .linear-regression img {
+    display: none;
+}
+
+[data-theme="dark"] .linear-regression .dark {
+    display: block;
+}
+
+.linear-regression img {
+    display: none;
+}
+
+.linear-regression .light {
+    display: block;
 }
