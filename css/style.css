@@ -639,3 +639,8 @@ footer a {
 .google-fit img, .piconet img, .linear-regression img {
     max-width: 300px;
 }
+
+/* OBJETS */
+#utilisation li {
+    margin-top: 10px;
+}
