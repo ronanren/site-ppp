@@ -119,15 +119,25 @@ main {
 }
 
 header {
-    padding: 80px 7%;
+    padding: 20px 7% 50px 7%;
 }
 
 article {
-    padding: 90px 7%;
+    padding: 50px 7%;
 }
 
+iframe {
+    border: none;
+    margin: 0 auto;
+}
 
-/* ZONES BLEUS */
+/* YOUTUBE EMBED */
+.youtube-embed {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ZONES GRISES */
 article:nth-child(even),
 article:nth-child(even) h3,
 article:nth-child(even) a {
