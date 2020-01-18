@@ -65,7 +65,6 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
     background-color: var(--white);
-    scroll-snap-type: y mandatory;
 }
 
 /* TITRES */
@@ -121,18 +120,10 @@ main {
 
 header {
     padding: 80px 7%;
-    scroll-snap-align: start;
-    min-height: 100vh;
-}
-
-footer {
-    scroll-snap-align: start;
 }
 
 article {
     padding: 90px 7%;
-    scroll-snap-align: start;
-    min-height: 100vh;
 }
 
 
@@ -161,6 +152,7 @@ figure img {
 
 figcaption {
     text-align: center;
+    margin-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -642,4 +634,8 @@ footer a {
 
 .linear-regression .light {
     display: block;
+}
+
+.google-fit img, .piconet img {
+    max-width: 300px;
 }
