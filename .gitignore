@@ -107,8 +107,8 @@ dist
 .DS_Store
 
 # Minified file
-css/*.min.css
-js/*.min.js
+#css/*.min.css
+#js/*.min.js
 
 # Blender
 *.blend1
